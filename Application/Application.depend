@@ -1,0 +1,85 @@
+# depslib dependency file v1.0
+1651693479 source:d:\projects\segments-game\application\point.cpp
+	"point.h"
+	"config.h"
+
+1651693563 d:\projects\segments-game\application\point.h
+	"graphics.h"
+	"config.h"
+
+1651692370 source:d:\projects\segments-game\application\main.cpp
+	"appmanager.h"
+
+1651688963 source:d:\projects\segments-game\application\generator.cpp
+	"generator.h"
+	"config.h"
+
+1651688427 d:\projects\segments-game\application\generator.h
+	<vector>
+	"point.h"
+	<ctime>
+	<cstdlib>
+
+1651691824 d:\projects\segments-game\application\config.h
+	<string>
+	"graphics.h"
+
+1651693550 source:d:\projects\segments-game\application\segment.cpp
+	"segment.h"
+
+1651693511 d:\projects\segments-game\application\segment.h
+	"point.h"
+	"graphics.h"
+
+1651689461 source:d:\projects\segments-game\application\player.cpp
+	"player.h"
+
+1651689476 d:\projects\segments-game\application\player.h
+	<string>
+
+1651692497 source:d:\projects\segments-game\application\board.cpp
+	"board.h"
+
+1651692508 d:\projects\segments-game\application\board.h
+	<vector>
+	"point.h"
+	"segment.h"
+
+1651690687 d:\projects\segments-game\application\window.h
+	"config.h"
+
+1651689818 d:\projects\segments-game\application\painter.h
+	"point.h"
+	"segment.h"
+	"config.h"
+
+1651690948 source:d:\projects\segments-game\application\painter.cpp
+	"painter.h"
+	<iostream>
+
+1651692628 source:d:\projects\segments-game\application\window.cpp
+	"window.h"
+
+1651693852 source:d:\projects\segments-game\application\appmanager.cpp
+	"appmanager.h"
+
+1651693616 d:\projects\segments-game\application\appmanager.h
+	"game.h"
+	"windowmanager.h"
+
+1651693736 d:\projects\segments-game\application\game.h
+	"board.h"
+	"player.h"
+
+1651693808 source:d:\projects\segments-game\application\windowmanager.cpp
+	"windowmanager.h"
+
+1651693229 d:\projects\segments-game\application\windowmanager.h
+	"window.h"
+	<map>
+
+1651693727 source:d:\projects\segments-game\application\game.cpp
+	"game.h"
+	"config.h"
+	"generator.h"
+

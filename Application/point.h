@@ -19,6 +19,7 @@ class Point {
         int getY() const;
         Status getStatus() const;
         void setStatus(Status status);
+        bool isClicked(int x, int y) const;
 
         void paint(int color = DEFAULT_COLOR) const;
 

@@ -1,9 +1,10 @@
 # depslib dependency file v1.0
-1651693479 source:d:\projects\segments-game\application\point.cpp
+1651786885 source:d:\projects\segments-game\application\point.cpp
 	"point.h"
 	"config.h"
+	<iostream>
 
-1651693563 d:\projects\segments-game\application\point.h
+1651785321 d:\projects\segments-game\application\point.h
 	"graphics.h"
 	"config.h"
 
@@ -37,10 +38,11 @@
 1651689476 d:\projects\segments-game\application\player.h
 	<string>
 
-1651692497 source:d:\projects\segments-game\application\board.cpp
+1651787899 source:d:\projects\segments-game\application\board.cpp
 	"board.h"
+	<iostream>
 
-1651692508 d:\projects\segments-game\application\board.h
+1651787839 d:\projects\segments-game\application\board.h
 	<vector>
 	"point.h"
 	"segment.h"
@@ -60,14 +62,14 @@
 1651692628 source:d:\projects\segments-game\application\window.cpp
 	"window.h"
 
-1651693852 source:d:\projects\segments-game\application\appmanager.cpp
+1651783725 source:d:\projects\segments-game\application\appmanager.cpp
 	"appmanager.h"
 
 1651693616 d:\projects\segments-game\application\appmanager.h
 	"game.h"
 	"windowmanager.h"
 
-1651693736 d:\projects\segments-game\application\game.h
+1651787780 d:\projects\segments-game\application\game.h
 	"board.h"
 	"player.h"
 
@@ -78,8 +80,9 @@
 	"window.h"
 	<map>
 
-1651693727 source:d:\projects\segments-game\application\game.cpp
+1651787532 source:d:\projects\segments-game\application\game.cpp
 	"game.h"
 	"config.h"
 	"generator.h"
+	<iostream>
 

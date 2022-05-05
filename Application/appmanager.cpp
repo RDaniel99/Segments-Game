@@ -10,8 +10,7 @@ void AppManager::run() {
     this->initWindows();
     this->initGame();
 
-    getch();
-    closegraph();
+    this->game.play();
 }
 
 void AppManager::initGame() {

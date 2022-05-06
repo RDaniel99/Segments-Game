@@ -38,11 +38,11 @@
 1651689476 d:\projects\segments-game\application\player.h
 	<string>
 
-1651787899 source:d:\projects\segments-game\application\board.cpp
+1651860213 source:d:\projects\segments-game\application\board.cpp
 	"board.h"
 	<iostream>
 
-1651787839 d:\projects\segments-game\application\board.h
+1651860225 d:\projects\segments-game\application\board.h
 	<vector>
 	"point.h"
 	"segment.h"
@@ -80,7 +80,7 @@
 	"window.h"
 	<map>
 
-1651787532 source:d:\projects\segments-game\application\game.cpp
+1651860470 source:d:\projects\segments-game\application\game.cpp
 	"game.h"
 	"config.h"
 	"generator.h"

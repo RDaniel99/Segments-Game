@@ -38,6 +38,8 @@ void Game::play() {
 
         this->board.markPoint(firstClickedPoint, Point::Status::SELECTED);
 
+        this->board.getPoints()[firstClickedPoint].paint(this->currentPlayer->getColor());
+
         int secondClickedPoint = detectClickedPoint();
 
         while(secondClickedPoint == -1) {
@@ -50,11 +52,32 @@ void Game::play() {
 
         if(this->board.getPointStatus(secondClickedPoint) == Point::Status::FREE) {
 
-            cout << "Nice. You picked a pair\n";
+            if(!this->board.canUnion(this->board.getPoints()[firstClickedPoint],
+                                     this->board.getPoints()[secondClickedPoint])) {
+
+                cout << "Segment intersects with another segments. Unmark points\n";
+
+                this->board.markPoint(firstClickedPoint, Point::Status::FREE);
+                this->board.getPoints()[firstClickedPoint].paint();
+                continue;
+            }
+
+            cout << "Nice. You picked a good pair\n";
             // TODO: Paint segment
 
             this->board.markPoint(firstClickedPoint, Point::Status::BLOCKED);
             this->board.markPoint(secondClickedPoint, Point::Status::BLOCKED);
+
+            this->board.getPoints()[secondClickedPoint].paint(this->currentPlayer->getColor());
+
+            Segment segment(this->board.getPoints()[firstClickedPoint],
+                            this->board.getPoints()[secondClickedPoint]);
+
+            this->board.addSegment(segment);
+            segment.paint(this->currentPlayer->getColor());
+
+            changePlayer();
+
             continue;
         }
 
@@ -62,11 +85,25 @@ void Game::play() {
 
             cout << "Unmark selected point\n";
             this->board.markPoint(secondClickedPoint, Point::Status::FREE);
+
+            this->board.getPoints()[secondClickedPoint].paint();
             continue;
         }
 
         cout << "Selected point was already blocked. Unblocking first point\n";
         this->board.markPoint(firstClickedPoint, Point::Status::FREE);
+        this->board.getPoints()[firstClickedPoint].paint();
+    }
+
+    changePlayer();
+
+    if(this->currentPlayer == &this->playerOne) {
+
+        cout << "Player one won!\n";
+    }
+    else {
+
+        cout << "Player two won!\n";
     }
 }
 
@@ -111,6 +148,8 @@ void Game::initPlayers() {
 
     this->playerOne = Player(PLAYER_ONE_NAME, PLAYER_ONE_COLOR);
     this->playerTwo = Player(PLAYER_TWO_NAME, PLAYER_TWO_COLOR);
+
+    this->currentPlayer = &this->playerOne;
 }
 
 void Game::initBoard() {

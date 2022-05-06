@@ -46,8 +46,12 @@ bool Board::existSolutions() const {
 
         for(auto pointTwo: this->points) {
 
+            if(pointOne.getX() == pointTwo.getX() &&
+               pointOne.getY() == pointTwo.getY()) continue;
+
             if(canUnion(pointOne, pointTwo)) {
 
+                cout << "Can union " << pointOne.getX() << ' ' << pointOne.getY() << ' ' << pointTwo.getX() << ' ' << pointTwo.getY() << '\n';
                 return true;
             }
         }

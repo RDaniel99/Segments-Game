@@ -51,7 +51,7 @@ bool Board::existSolutions() const {
 
             if(canUnion(pointOne, pointTwo)) {
 
-                cout << "Can union " << pointOne.getX() << ' ' << pointOne.getY() << ' ' << pointTwo.getX() << ' ' << pointTwo.getY() << '\n';
+                // cout << "Can union " << pointOne.getX() << ' ' << pointOne.getY() << ' ' << pointTwo.getX() << ' ' << pointTwo.getY() << '\n';
                 return true;
             }
         }

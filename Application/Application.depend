@@ -1,5 +1,5 @@
 # depslib dependency file v1.0
-1651786885 source:d:\projects\segments-game\application\point.cpp
+1651998984 source:d:\projects\segments-game\application\point.cpp
 	"point.h"
 	"config.h"
 	<iostream>
@@ -11,7 +11,7 @@
 1651692370 source:d:\projects\segments-game\application\main.cpp
 	"appmanager.h"
 
-1651688963 source:d:\projects\segments-game\application\generator.cpp
+1651993918 source:d:\projects\segments-game\application\generator.cpp
 	"generator.h"
 	"config.h"
 
@@ -21,24 +21,25 @@
 	<ctime>
 	<cstdlib>
 
-1651691824 d:\projects\segments-game\application\config.h
+1654196486 d:\projects\segments-game\application\config.h
 	<string>
 	"graphics.h"
 
-1651693550 source:d:\projects\segments-game\application\segment.cpp
+1651997558 source:d:\projects\segments-game\application\segment.cpp
 	"segment.h"
 
-1651693511 d:\projects\segments-game\application\segment.h
+1651997306 d:\projects\segments-game\application\segment.h
 	"point.h"
 	"graphics.h"
 
-1651689461 source:d:\projects\segments-game\application\player.cpp
+1654198795 source:d:\projects\segments-game\application\player.cpp
 	"player.h"
 
-1651689476 d:\projects\segments-game\application\player.h
+1654198937 d:\projects\segments-game\application\player.h
 	<string>
+	"board.h"
 
-1651860213 source:d:\projects\segments-game\application\board.cpp
+1654198630 source:d:\projects\segments-game\application\board.cpp
 	"board.h"
 	<iostream>
 
@@ -69,9 +70,9 @@
 	"game.h"
 	"windowmanager.h"
 
-1651787780 d:\projects\segments-game\application\game.h
+1654198907 d:\projects\segments-game\application\game.h
 	"board.h"
-	"player.h"
+	"humanplayer.h"
 
 1651693808 source:d:\projects\segments-game\application\windowmanager.cpp
 	"windowmanager.h"
@@ -80,9 +81,16 @@
 	"window.h"
 	<map>
 
-1651860470 source:d:\projects\segments-game\application\game.cpp
+1654198943 source:d:\projects\segments-game\application\game.cpp
 	"game.h"
 	"config.h"
 	"generator.h"
 	<iostream>
+
+1654198776 source:d:\projects\segments-game\application\humanplayer.cpp
+	"humanplayer.h"
+	<iostream>
+
+1654198314 d:\projects\segments-game\application\humanplayer.h
+	"player.h"
 

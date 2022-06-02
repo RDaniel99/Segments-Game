@@ -41,6 +41,8 @@
 		<Unit filename="game.h" />
 		<Unit filename="generator.cpp" />
 		<Unit filename="generator.h" />
+		<Unit filename="humanplayer.cpp" />
+		<Unit filename="humanplayer.h" />
 		<Unit filename="main.cpp" />
 		<Unit filename="player.cpp" />
 		<Unit filename="player.h" />

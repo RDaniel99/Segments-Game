@@ -10,18 +10,20 @@ Game::Game() {}
 
 void Game::changePlayer() {
 
-    if(this->currentPlayer == &this->playerOne) {
+    if(this->currentPlayer == this->playerOne) {
 
-        this->currentPlayer = &this->playerTwo;
+        this->currentPlayer = this->playerTwo;
     }
     else {
 
-        this->currentPlayer = &this->playerOne;
+        this->currentPlayer = this->playerOne;
     }
 }
 
+
 void Game::play() {
 
+/*
     while(this->board.existSolutions()) {
 
         int firstClickedPoint = detectClickedPoint();
@@ -94,10 +96,22 @@ void Game::play() {
         this->board.markPoint(firstClickedPoint, Point::Status::FREE);
         this->board.getPoints()[firstClickedPoint].paint();
     }
+*/
+
+    while(this->board.existSolutions()) {
+
+        bool didMove = this->currentPlayer->makeMove();
+
+
+        if(didMove) {
+
+            changePlayer();
+        }
+    }
 
     changePlayer();
 
-    if(this->currentPlayer == &this->playerOne) {
+    if(this->currentPlayer == this->playerOne) {
 
         cout << "Player one won!\n";
     }
@@ -107,7 +121,7 @@ void Game::play() {
     }
 }
 
-int Game::detectClickedPoint() const {
+/*int Game::detectClickedPoint() const {
 
     pair<int, int> mouseClick = getMouseClick();
 
@@ -136,20 +150,20 @@ pair<int, int> Game::getMouseClick() const {
     cout << "Click detected on " << x << ' ' << y << '\n';
 
     return {x, y};
-}
+}*/
 
 void Game::init() {
 
-    this->initPlayers();
     this->initBoard();
+    this->initPlayers(&(this->board));
 }
 
-void Game::initPlayers() {
+void Game::initPlayers(Board *board) {
 
-    this->playerOne = Player(PLAYER_ONE_NAME, PLAYER_ONE_COLOR);
-    this->playerTwo = Player(PLAYER_TWO_NAME, PLAYER_TWO_COLOR);
+    this->playerOne = new HumanPlayer(PLAYER_ONE_NAME, PLAYER_ONE_COLOR, board);
+    this->playerTwo = new HumanPlayer(PLAYER_TWO_NAME, PLAYER_TWO_COLOR, board);
 
-    this->currentPlayer = &this->playerOne;
+    this->currentPlayer = this->playerOne;
 }
 
 void Game::initBoard() {

@@ -21,7 +21,7 @@
 	<ctime>
 	<cstdlib>
 
-1654196486 d:\projects\segments-game\application\config.h
+1654422441 d:\projects\segments-game\application\config.h
 	<string>
 	"graphics.h"
 
@@ -39,7 +39,7 @@
 	<string>
 	"board.h"
 
-1654198630 source:d:\projects\segments-game\application\board.cpp
+1654417638 source:d:\projects\segments-game\application\board.cpp
 	"board.h"
 	<iostream>
 
@@ -70,9 +70,10 @@
 	"game.h"
 	"windowmanager.h"
 
-1654198907 d:\projects\segments-game\application\game.h
+1654422358 d:\projects\segments-game\application\game.h
 	"board.h"
 	"humanplayer.h"
+	"randomplayer.h"
 
 1651693808 source:d:\projects\segments-game\application\windowmanager.cpp
 	"windowmanager.h"
@@ -81,16 +82,22 @@
 	"window.h"
 	<map>
 
-1654198943 source:d:\projects\segments-game\application\game.cpp
+1654422425 source:d:\projects\segments-game\application\game.cpp
 	"game.h"
 	"config.h"
 	"generator.h"
 	<iostream>
 
-1654198776 source:d:\projects\segments-game\application\humanplayer.cpp
+1654198960 source:d:\projects\segments-game\application\humanplayer.cpp
 	"humanplayer.h"
 	<iostream>
 
 1654198314 d:\projects\segments-game\application\humanplayer.h
 	"player.h"
+
+1654421846 d:\projects\segments-game\application\randomplayer.h
+	"player.h"
+
+1654422230 source:d:\projects\segments-game\application\randomplayer.cpp
+	"randomplayer.h"
 

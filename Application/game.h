@@ -3,6 +3,7 @@
 
 #include "board.h"
 #include "humanplayer.h"
+#include "randomplayer.h"
 
 class Game {
 

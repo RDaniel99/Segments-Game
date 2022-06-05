@@ -23,7 +23,7 @@ enum {
     PLAYER_VS_RANDOM
 };
 
-const int GAME_MODE = TWO_PLAYERS;
+const int GAME_MODE = PLAYER_VS_RANDOM;
 
 const int DEFAULT_NUMBER_OF_POINTS = 15;
 

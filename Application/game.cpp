@@ -161,7 +161,15 @@ void Game::init() {
 void Game::initPlayers(Board *board) {
 
     this->playerOne = new HumanPlayer(PLAYER_ONE_NAME, PLAYER_ONE_COLOR, board);
-    this->playerTwo = new HumanPlayer(PLAYER_TWO_NAME, PLAYER_TWO_COLOR, board);
+
+    if(GAME_MODE == PLAYER_VS_RANDOM) {
+
+        this->playerTwo = new RandomPlayer(PLAYER_TWO_NAME, PLAYER_TWO_COLOR, board);
+    }
+    else {
+
+        this->playerTwo = new HumanPlayer(PLAYER_TWO_NAME, PLAYER_TWO_COLOR, board);
+    }
 
     this->currentPlayer = this->playerOne;
 }

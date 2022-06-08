@@ -48,6 +48,8 @@
 		<Unit filename="player.h" />
 		<Unit filename="point.cpp" />
 		<Unit filename="point.h" />
+		<Unit filename="randomplayer.cpp" />
+		<Unit filename="randomplayer.h" />
 		<Unit filename="segment.cpp" />
 		<Unit filename="segment.h" />
 		<Unit filename="window.cpp" />

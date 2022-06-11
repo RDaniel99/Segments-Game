@@ -1,24 +1,28 @@
 #ifndef H_WINDOW_MANAGER
 #define H_WINDOW_MANAGER
 
-#include "window.h"
-
-#include <map>
+#include "gamewindow.h"
+#include "menuwindow.h"
 
 using namespace std;
 
 class WindowManager {
 
     public:
+
+        static const int MENU_WINDOW = 1;
+        static const int GAME_WINDOW_BOT = 2;
+        static const int GAME_WINDOW_HUMAN = 3;
+
         WindowManager();
-        bool setCurrentWindow(int windowIdentifier);
-        void initWindows();
+        Window* initWindow(int windowId);
 
     private:
-        int initGameWindow();
+        Window* initGameWindow(int windowId);
+        Window* initMenuWindow();
+        Window* changeWindow(Window* nextWindow);
 
-        map<int, Window> windows;
-        int currentWindowIdentifier;
+        Window* currentWindow;
 };
 
 #endif // H_WINDOW_MANAGER

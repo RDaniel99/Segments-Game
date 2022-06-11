@@ -21,7 +21,7 @@
 	<ctime>
 	<cstdlib>
 
-1654422441 d:\projects\segments-game\application\config.h
+1654940820 d:\projects\segments-game\application\config.h
 	<string>
 	"graphics.h"
 
@@ -32,14 +32,14 @@
 	"point.h"
 	"graphics.h"
 
-1654198795 source:d:\projects\segments-game\application\player.cpp
+1654718753 source:d:\projects\segments-game\application\player.cpp
 	"player.h"
 
-1654198937 d:\projects\segments-game\application\player.h
+1654718753 d:\projects\segments-game\application\player.h
 	<string>
 	"board.h"
 
-1654417638 source:d:\projects\segments-game\application\board.cpp
+1654718753 source:d:\projects\segments-game\application\board.cpp
 	"board.h"
 	<iostream>
 
@@ -48,8 +48,9 @@
 	"point.h"
 	"segment.h"
 
-1651690687 d:\projects\segments-game\application\window.h
+1654936822 d:\projects\segments-game\application\window.h
 	"config.h"
+	"graphics.h"
 
 1651689818 d:\projects\segments-game\application\painter.h
 	"point.h"
@@ -60,44 +61,60 @@
 	"painter.h"
 	<iostream>
 
-1651692628 source:d:\projects\segments-game\application\window.cpp
+1654937325 source:d:\projects\segments-game\application\window.cpp
 	"window.h"
 
-1651783725 source:d:\projects\segments-game\application\appmanager.cpp
+1654940064 source:d:\projects\segments-game\application\appmanager.cpp
 	"appmanager.h"
 
-1651693616 d:\projects\segments-game\application\appmanager.h
-	"game.h"
+1654940056 d:\projects\segments-game\application\appmanager.h
 	"windowmanager.h"
 
-1654422358 d:\projects\segments-game\application\game.h
+1654941135 d:\projects\segments-game\application\game.h
 	"board.h"
 	"humanplayer.h"
 	"randomplayer.h"
 
-1651693808 source:d:\projects\segments-game\application\windowmanager.cpp
+1654941448 source:d:\projects\segments-game\application\windowmanager.cpp
 	"windowmanager.h"
+	<iostream>
 
-1651693229 d:\projects\segments-game\application\windowmanager.h
-	"window.h"
-	<map>
+1654941156 d:\projects\segments-game\application\windowmanager.h
+	"gamewindow.h"
+	"menuwindow.h"
 
-1654422425 source:d:\projects\segments-game\application\game.cpp
+1654941129 source:d:\projects\segments-game\application\game.cpp
 	"game.h"
 	"config.h"
 	"generator.h"
 	<iostream>
 
-1654198960 source:d:\projects\segments-game\application\humanplayer.cpp
+1654718753 source:d:\projects\segments-game\application\humanplayer.cpp
 	"humanplayer.h"
 	<iostream>
 
-1654198314 d:\projects\segments-game\application\humanplayer.h
+1654718753 d:\projects\segments-game\application\humanplayer.h
 	"player.h"
 
-1654421846 d:\projects\segments-game\application\randomplayer.h
+1654718753 d:\projects\segments-game\application\randomplayer.h
 	"player.h"
 
-1654422230 source:d:\projects\segments-game\application\randomplayer.cpp
+1654718753 source:d:\projects\segments-game\application\randomplayer.cpp
 	"randomplayer.h"
+
+1654940999 d:\projects\segments-game\application\gamewindow.h
+	"window.h"
+	"game.h"
+
+1654939886 d:\projects\segments-game\application\menuwindow.h
+	"window.h"
+
+1654940986 source:d:\projects\segments-game\application\gamewindow.cpp
+	"gamewindow.h"
+	<iostream>
+
+1654940721 source:d:\projects\segments-game\application\menuwindow.cpp
+	"menuwindow.h"
+	"graphics.h"
+	"windowmanager.h"
 

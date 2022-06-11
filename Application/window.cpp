@@ -19,3 +19,5 @@ int Window::getIdentifier() const {
 }
 
 void Window::initGraphicElements() {}
+
+int Window::run() {}

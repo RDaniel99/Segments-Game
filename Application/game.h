@@ -9,6 +9,7 @@ class Game {
 
     public:
         Game();
+        Game(MODE gameMode);
         void init();
         void changePlayer();
         void play();
@@ -24,6 +25,8 @@ class Game {
         Player* playerOne;
         Player* playerTwo;
         Player* currentPlayer;
+        MODE gameMode;
+
 };
 
 #endif // H_GAME

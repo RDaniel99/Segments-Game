@@ -1,24 +1,15 @@
 #include "appmanager.h"
 
-AppManager::AppManager() {
-
-    this->game = Game();
-}
+AppManager::AppManager() {}
 
 void AppManager::run() {
 
-    this->initWindows();
-    this->initGame();
+    Window* currentWindow = this->windowManager.initWindow(WindowManager::MENU_WINDOW);
+    int nextWindow = currentWindow->run();
 
-    this->game.play();
-}
+    while(nextWindow != -2) {
 
-void AppManager::initGame() {
-
-    this->game.init();
-}
-
-void AppManager::initWindows() {
-
-    this->windowManager.initWindows();
+        currentWindow = this->windowManager.initWindow(nextWindow);
+        nextWindow = currentWindow->run();
+    }
 }

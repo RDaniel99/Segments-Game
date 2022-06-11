@@ -18,12 +18,10 @@ const int PLAYER_TWO_COLOR = GREEN;
 const int DEFAULT_COLOR = WHITE;
 const int DEFAULT_RADIUS = 4;
 
-enum {
+enum MODE {
     TWO_PLAYERS,
     PLAYER_VS_RANDOM
 };
-
-const int GAME_MODE = PLAYER_VS_RANDOM;
 
 const int DEFAULT_NUMBER_OF_POINTS = 15;
 

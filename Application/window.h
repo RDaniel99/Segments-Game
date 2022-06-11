@@ -2,6 +2,7 @@
 #define H_WINDOW
 
 #include "config.h"
+#include "graphics.h"
 
 class Window {
 
@@ -11,6 +12,7 @@ class Window {
         void dump();
         int getIdentifier() const;
 
+        virtual int run();
         virtual void initGraphicElements();
 
     private:

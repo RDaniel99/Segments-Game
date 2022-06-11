@@ -1,44 +1,56 @@
 #include "windowmanager.h"
 
+#include <iostream>
+
 WindowManager::WindowManager() {
 
-    windows.clear();
-    this->currentWindowIdentifier = -2;
+    this->currentWindow = NULL;
 }
 
-bool WindowManager::setCurrentWindow(int windowIdentifier) {
+Window* WindowManager::initWindow(int windowId) {
 
-    if(this->currentWindowIdentifier != windowIdentifier && windowIdentifier != -2) {
+    if(windowId == MENU_WINDOW) {
 
-        this->windows[currentWindowIdentifier].dump();
-        this->windows[windowIdentifier].init();
-
-        setcurrentwindow(windowIdentifier);
-
-        this->currentWindowIdentifier = windowIdentifier;
-
-        return true;
+        return changeWindow(initMenuWindow());
     }
 
-    return false;
+    return changeWindow(initGameWindow(windowId));
 }
 
-void WindowManager::initWindows() {
+Window* WindowManager::changeWindow(Window* nextWindow) {
 
-    int startWindow;
-    startWindow = initGameWindow();
+    if(this->currentWindow != NULL) {
 
-    this->setCurrentWindow(startWindow);
+        this->currentWindow->dump();
+    }
+    this->currentWindow = nextWindow;
+
+    return this->currentWindow;
 }
 
-int WindowManager::initGameWindow() {
+Window* WindowManager::initGameWindow(int windowId) {
 
-    Window gameWindow;
+    Window* gameWindow;
 
-    gameWindow.init();
-    gameWindow.dump();
+    if(windowId == GAME_WINDOW_BOT) {
 
-    this->windows[gameWindow.getIdentifier()] = gameWindow;
+        gameWindow = new GameWindow(MODE::PLAYER_VS_RANDOM);
+    }
+    else {
 
-    return gameWindow.getIdentifier();
+        gameWindow = new GameWindow(MODE::TWO_PLAYERS);
+    }
+
+    gameWindow->init();
+
+    return gameWindow;
+}
+
+Window* WindowManager::initMenuWindow() {
+
+    Window* menuWindow = new MenuWindow();
+
+    menuWindow->init();
+
+    return menuWindow;
 }
